@@ -1,0 +1,28 @@
+extends layout
+
+block content
+    .content
+        h1 Acme FM Backend API
+        p 
+            | This web service provides the endpoints that applications can query for user expenses.
+
+        h2 Audience
+        p
+            | https://acme-fm-backend-api
+
+        h2 Permissions
+        p
+            | Entrance to this API is controlled with OAuth2 access tokens.
+            | You can request the following permissions during an authorization request with the identity provider:
+        ul
+            li read:user_expenses - Read any user expenses
+            li read:current_user_expenses - Read current user expenses
+
+        h2 API Endpoints
+        ul 
+            li GET #[a(href="/expenses/auth0|684c417378bc64b837ab0c08") /expenses/{userid}] - Returns the total amount of expenses (requires read:user_expenses or read:current_user_expenses permission)
+            li GET #[a(href="/expenses") /expenses] - Returns the total amount of expenses (requires read:current_user_expenses permission)
+
+        h2 Information Endpoints
+        ul
+            li GET / - Displays this page

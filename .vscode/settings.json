@@ -1,0 +1,15 @@
+{
+    "workbench.startupEditor": "none",
+    "workbench.editorAssociations": {
+        "*.md": "vscode.markdown.preview.editor"
+    },
+    "editor.detectIndentation": false,
+    "editor.insertSpaces": true,
+    "editor.minimap.enabled": false,
+    "editor.tabSize": 4,
+    "files.autoSave": "afterDelay",
+    "[vue]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "explorer.incrementalNaming": "disabled"
+}

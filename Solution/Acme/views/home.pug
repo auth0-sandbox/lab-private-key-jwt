@@ -1,0 +1,31 @@
+extends layout
+
+block content
+    .content
+        h1 Home Page
+        p
+            | Hello
+            |
+            if user
+                a(href='/user')=user.name
+            else
+                | Anonymous
+            |,
+        if user    
+            p So far, this app has been used to manage:
+            if total == null
+                p Internal error retreiving expenses 
+            else
+                ul
+                    li
+                        strong=count
+                        |
+                        | expenses
+                    li
+                        strong=total
+                        |
+                        | dollars
+        else
+            p Please sign on to see your personal expenses.
+
+

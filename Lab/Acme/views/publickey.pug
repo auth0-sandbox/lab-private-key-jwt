@@ -1,0 +1,23 @@
+extends layout
+
+block content
+    .content
+        script.
+            async function copyPublicKeyToClipboard() {
+                try {
+                    const publicKey = `!{publicKey}`
+                    await navigator.clipboard.writeText(publicKey)
+                    alert('Public key copied to clipboard')
+                } catch (err) {
+                    alert('Failed to copy public key: ' + err.message)
+                }
+            }
+        h1 Public Key
+        if publicKey
+            pre #{publicKey}
+            p.clipboard 
+                img(src='/images/copy.png', alt='Copy Public Key' onclick='copyPublicKeyToClipboard()')
+                a(href='/publickey.pem')
+                    img(src='/images/download.png', alt='Download Public Key')
+        else
+            p No public key available.

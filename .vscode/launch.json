@@ -1,0 +1,85 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Backend API",
+            "cwd": "${workspaceRoot}/Lab/API",
+            "runtimeExecutable": "nodemon",
+            "runtimeArgs": [
+                "--watch",
+                ".",
+                "--watch",
+                ".env"
+            ],
+            "program": "src/server.js",
+            "restart": true,
+            "console": "internalConsole"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Acme FM",
+            "cwd": "${workspaceRoot}/Lab/Acme",
+            "runtimeExecutable": "nodemon",
+            "runtimeArgs": [
+                "--watch",
+                ".",
+                "--watch",
+                ".env"
+            ],
+            "program": "src/app.js",
+            "restart": true,
+            "console": "internalConsole"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Solution: Backend API",
+            "cwd": "${workspaceRoot}/Lab/API",
+            "runtimeExecutable": "nodemon",
+            "runtimeArgs": [
+                "--watch",
+                ".",
+                "--watch",
+                ".env"
+            ],
+            "program": "src/server.js",
+            "restart": true,
+            "console": "internalConsole"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Solution: Acme FM",
+            "cwd": "${workspaceRoot}/Lab/Acme",
+            "runtimeExecutable": "nodemon",
+            "runtimeArgs": [
+                "--watch",
+                ".",
+                "--watch",
+                ".env"
+            ],
+            "program": "src/app.js",
+            "restart": true,
+            "console": "internalConsole"
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Launch All",
+            "configurations": [
+                "Backend API",
+                "Acme FM"
+            ]
+        },
+        {
+            "name": "Solution: Launch All",
+            "configurations": [
+                "Backend API",
+                "Acme FM"
+            ]
+        }
+    ]
+}

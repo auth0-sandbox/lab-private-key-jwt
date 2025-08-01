@@ -1,0 +1,7 @@
+{
+    "name": "Auth0 Application Development",
+    "build": {
+        "dockerfile": "Dockerfile",
+    },
+    "postCreateCommand": "mkcert -install"
+}

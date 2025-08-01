@@ -1,0 +1,7 @@
+{
+    "name": "lab-api-access-management",
+    "version": "1.0.0",
+    "scripts": {
+        "start": "code -r ./README.md"
+    }
+}

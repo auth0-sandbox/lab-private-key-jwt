@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    .content
+        h1 User Information (/userinfo)
+        p
+            | Hello
+            |
+            if user
+                a(href='/user')=user.name
+            else
+                | Anonymous
+            |,
+        if user    
+            pre #{JSON.stringify(userinfo, null, 4)}
+
+        else
+            p Please sign on to see your user information.

@@ -1,0 +1,46 @@
+extends layout
+
+mixin token(token, type)
+    li.dropdown
+        img.dropbtn(height="40px",src=`/images/icon-${type}.svg`)
+        .dropdown-content
+            a(href='javascript:;', onclick=`navigator.clipboard.writeText("${token}")`) Copy
+            a(target='_blank',href=`https://jwt.io#token=${token}`) Inspect
+
+block content
+    .content
+        h1 Tokens
+        p
+            | Hello
+            |
+            if user
+                a(href='/user')=user.name
+            else
+                | Anonymous
+            |,
+        if user
+            ul.token-set
+                li
+                    h4 Tokens:
+                if idToken
+                    +token(idToken, 'id-token')
+                if accessToken
+                    +token(accessToken, 'access-token')
+                if refreshToken
+                    +token(refreshToken, 'refresh-token')
+            table(border='1')
+                tr
+                    th name
+                    th value
+                each key in Object.keys(user || {})
+                    tr
+                        td=key
+                        td=user[key]
+            if access_token
+                -
+                    const date = new Date();
+                    date.setSeconds(date.getSeconds() + accessToken.expires_in);
+                    console.log(date);
+                p=`Access Token Expires: ${date.toLocaleString('en-US')}`
+        else
+            p Please sign on to see the authorization tokens.

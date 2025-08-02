@@ -137,7 +137,7 @@ right-click, and choose *Open in Integrated Terminal*.
 
 1. Leave the terminal window open for the next step.
 
-## Part 2: Configure the application to use openid-client
+## Part 3: Configure the application to use openid-client
 
 1. In the terminal use npm to install the openid-client and jsonwebtoken libraries:
     ```bash
@@ -381,7 +381,7 @@ indicating the application could communicate with the backend API!
 
     <div style="text-align: center;"><img src="./.assets/images/vscode-rundebug-multiple-apps.png" /></div>
 
-## Part 3: Configure the Auth0 tenant for Private Key JWT
+## Part 4: Configure the Auth0 tenant for Private Key JWT
 
 1. Move to the terminal window.
 
@@ -416,7 +416,7 @@ indicating the application could communicate with the backend API!
 
 1. Set the *Expiration date* to *Never* and click the *Add Credential* button to save it.
 
-### Part 4: Configure the application to use PK JWT
+### Part 5: Configure the application to use PK JWT
 
 1. Open the "Lab/Acme/.env" file.
 
@@ -483,7 +483,7 @@ indicating the application could communicate with the backend API!
 
 1. Close any open terminals.
 
-## Part 4: revert to CLIENT_SECRET in the Auth0 tenant
+## Part 6: revert to CLIENT_SECRET in the Auth0 tenant
 
 1. In the Auth0 tenant open the Acme Financial Management application from *Applications &rarr; Applications*.
 
